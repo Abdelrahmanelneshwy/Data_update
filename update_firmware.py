@@ -10,7 +10,7 @@ import git
 def update():
 	os.system('git config --global user.email "abdelrahmanelneshwy77@gmail.com')
 	os.system('git add .')
-	os.system(f'git commit -m \'Newupdate\' ')
+	os.system(f'git commit -m \'{comment_Entry.get()}\' ')
 	os.system('git push origin main')
 
 	
