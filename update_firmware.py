@@ -13,6 +13,8 @@ def update():
 		os.system('git add .')
 		os.system(f'git commit -m \'{comment_Entry.get()}\' ')
 		os.system('git push origin main')
+		File_Entry.delete(0, tk.END)
+		comment_Entry.delete(0, tk.END)
 	except:
 		print("wrong path")
 
