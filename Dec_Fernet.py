@@ -8,7 +8,7 @@ def Decryption(input_file):
 	cipher_suite = Fernet(key)
 
 	# Data to be decrypted
-	output_file = "updatetext.txt"
+	output_file = "update.txt"
 
 	with open(input_file, 'rb') as sourceFile, open(output_file, 'wb') as destFile:
 		for line in sourceFile:

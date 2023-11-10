@@ -58,11 +58,13 @@ File_label = tk.Label(canves1,
 	background="Orange",
 	foreground="white",
 	borderwidth=10)
-File_label.place(x=80,y=100)
+File_label.place(x=60,y=100)
 File_Entry = tk.Entry(canves1,
-     font=("Arial", 20, "bold")
-     )
-File_Entry.place(x=250,y = 107)
+     	     font=("Arial", 15, "bold"),
+     	     width=30,
+     	     borderwidth=10
+     	     )
+File_Entry.place(x=220,y = 107)
 
 
 comment_label = tk.Label(canves1, 
@@ -71,11 +73,13 @@ comment_label = tk.Label(canves1,
 	background="Orange",
 	foreground="white",
 	borderwidth=10)
-comment_label.place(x=80,y=200)
+comment_label.place(x=60,y=200)
 comment_Entry = tk.Entry(canves1,
-     font=("Arial", 20, "bold")
-     )
-comment_Entry.place(x=250,y = 207)
+    		font=("Arial", 15, "bold"),
+      		width=30,
+      		borderwidth=10
+    		)
+comment_Entry.place(x=220,y = 207)
 
 # Run the main event loop
 iti_window.mainloop()

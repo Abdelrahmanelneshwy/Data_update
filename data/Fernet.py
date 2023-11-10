@@ -6,7 +6,7 @@ def Encryption(input_file):
 	# Create a Fernet cipher object with the key
 	cipher_suite = Fernet(key)
 
-	output_file = "update.txt"
+	output_file = "Encrypted_File.txt"
 
 	with open(input_file, 'rb') as sourceFile, open(output_file, 'wb') as destFile:
 		for line in sourceFile:
