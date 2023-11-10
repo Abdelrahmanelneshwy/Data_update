@@ -2,16 +2,19 @@ import tkinter as tk
 from tkinter import *
 import os
 import git
-
-
+from Fernet import *
 
 
 			
 def update():
-	os.system('git config --global user.email "abdelrahmanelneshwy77@gmail.com')
-	os.system('git add .')
-	os.system(f'git commit -m \'{comment_Entry.get()}\' ')
-	os.system('git push origin main')
+	try:
+		Encryption(File_Entry.get())
+		os.system('git config --global user.email "abdelrahmanelneshwy77@gmail.com')
+		os.system('git add .')
+		os.system(f'git commit -m \'{comment_Entry.get()}\' ')
+		os.system('git push origin main')
+	except:
+		print("wrong path")
 
 	
     
@@ -45,6 +48,20 @@ update_button = tk.Button(canves1,
 	  foreground="black"
 	  )
 update_button.place(x=200,y = 400)
+
+
+File_label = tk.Label(canves1, 
+	text="File Path",
+	font=("Arial", 20, "bold"),
+	background="Orange",
+	foreground="white",
+	borderwidth=10)
+File_label.place(x=80,y=100)
+File_Entry = tk.Entry(canves1,
+     font=("Arial", 20, "bold")
+     )
+File_Entry.place(x=250,y = 107)
+
 
 comment_label = tk.Label(canves1, 
 	text="comment",
