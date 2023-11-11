@@ -1,10 +1,14 @@
 import tkinter as tk
 from tkinter import *
+from tkinter import filedialog
 import os
 import git
 from Fernet import *
 
-
+def browse_file():
+    file_path = filedialog.askopenfilename(title="Select a file")
+    File_Entry.delete(0, tk.END)  # Clear the current content
+    File_Entry.insert(0, file_path)
 			
 def update():
 	try:
@@ -51,6 +55,14 @@ update_button = tk.Button(canves1,
 	  )
 update_button.place(x=200,y = 400)
 
+browse_button = tk.Button(canves1, 
+			text="Browse",
+			command=browse_file,
+			font=("Arial", 20, "bold"),
+			background="yellow",
+	  		foreground="black"
+			 )
+browse_button.place(x=400,y = 400)
 
 File_label = tk.Label(canves1, 
 	text="File Path",
