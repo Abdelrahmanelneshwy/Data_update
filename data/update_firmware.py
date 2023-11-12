@@ -12,7 +12,7 @@ def browse_file():
 			
 def update():
 	try:
-		Encryption(File_Entry.get())
+		#Encryption(File_Entry.get())
 		os.system('git config --global user.email "abdelrahmanelneshwy77@gmail.com')
 		os.system('git add .')
 		os.system(f'git commit -m \'{comment_Entry.get()}\' ')
